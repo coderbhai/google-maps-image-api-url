@@ -12,9 +12,9 @@ module.exports = function( opts ) {
 
 	if( opts.type == 'staticmap' ) {
 
-		if( opts.center === undefined ) {
+		if( opts.center === undefined && opts.marker === undefined ) {
 
-			throw new Error( 'center must be defined in options' );
+			throw new Error( 'center or marker must be defined in options' );
 		} else if( opts.type === undefined ) {
 
 			throw new Error( 'type must be defined in options' );
